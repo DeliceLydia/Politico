@@ -10,12 +10,6 @@
         font-size: 18px;
         background-color: #253053;
     }
-    /* .content{
-        max-width: 100%;
-        margin: 0.8rem auto 0 auto;
-    
-    } */
-   
     .navbar-side{
         display: flex;
         flex-direction: column;
@@ -172,3 +166,15 @@
             width: 93%;
         }
     }
+    /* vote */
+    @media(min-width: 768px){
+    .chunk-1{
+        margin-top: 3%;
+        margin-left: 25%;
+        width: 50%;
+    }
+    .navbar-side ul li{
+        padding: 0 15px;
+     }
+}
+

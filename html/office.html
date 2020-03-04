@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale=1.0>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Political Party</title>
+    <title>Political Office</title>
     <link rel="stylesheet" href="../css/css.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
         <div class="container">
             <div class="chunk">
                 <header class="head">
-                  <h1>Political Party Information</h1>
+                  <h1>Political Office Information</h1>
                   <p id="description">Thanks for Choosing us!</p>
                 </header>
                 
@@ -52,21 +52,22 @@
                     <input type="text" name="Id" id="Id-label" class="form-control" placeholder="Enter Id"
                         required>
                         </div>
+                        <div class="form">
+                                <p>Type</p>
+                                <select name="role" id="dropdown" class="form2" required>
+                                    <option disabled selected value>Select Type</option>
+                                    <option value="student">Federal</option>
+                                    <option value="job">Legislative</option>
+                                    <option value="learner">State</option>
+                                    <option value="preferNo">Local Government</option>
+                                </select>
+                            </div>
                     <div class="form">
-                            <label id="name-label" for="name">Name</label>
-                <input type="text" name="name" id="name-label" class="form-control" placeholder="Enter Party name"
+                            <label id="adress-label" for="address">Name</label>
+                <input type="text" name="address" id="address-label" class="form-control" placeholder="Enter office name"
                     required>
                     </div>
-                    <div class="form">
-                            <label id="adress-label" for="address">HqAddress</label>
-                <input type="text" name="address" id="address-label" class="form-control" placeholder="Enter Party Address"
-                    required>
-                    </div>
-                    <div class="form">
-                            <label id="logo-label" for="logo">LogoUrl</label>
-                <input type="text" name="logo" id="logo-label" class="form-control" placeholder="Enter logoUrl"
-                    required>
-                    </div>
+                
                     <div class="form">
                             <button type="submit" id="submit" class="submit-button">Create</button>
                            </div>

@@ -135,7 +135,7 @@
         padding: 0 20px;
      }
      .chunk{
-         margin-top: 8%;
+         margin-top: 6%;
          margin-left: 25%;
          width: 50%;
      }
@@ -174,7 +174,40 @@
         width: 50%;
     }
     .navbar-side ul li{
-        padding: 0 15px;
+        padding: 0 20px;
      }
 }
+/* result */
+thead{
+    font-weight: 700;
+    font-size: 15pt;
+    text-transform: uppercase;
+
+  }
+thead td{
+    color: #517d0f;
+    text-align: center;
+}
+  td{
+    width: 5%; 
+    font-size: 20px;
+    padding: 8px;
+    color: #000;
+    border-bottom: 1px #000 solid;
+    border-right: 1px #000 solid;
+    cursor: pointer;
+    text-align: center;
+  }
+table{
+    background-color: #fff;
+}
+@media(min-width: 768px){
+    table{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+       }
+}
+
+
 

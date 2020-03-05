@@ -298,6 +298,12 @@ label{
     font-weight: 300;
     margin-bottom: 12px; 
 }
+@media(min-width: 768px){
+    .submit-button{
+        width: 80%;
+        margin-left: 30px;
+    }
+}
 /* Log In */
 #container-login{
         max-width: 100%;

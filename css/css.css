@@ -125,6 +125,12 @@
         flex-direction: row;
         justify-content: flex-end;
      }
+     .navbar-side-header{
+        margin: 17px 0;
+        margin-left: -1px;
+        font-size: 38px;
+         width: 50vw;
+     }
      .navbar-side ul{
          display: flex;
          flex-direction: row;
@@ -208,6 +214,16 @@ table{
         right: 0; 
        }
 }
+/* petition */
+.input-textarea{
+    min-height: 120px;
+    width: 90%;
+    padding: 0.625rem;
+    resize: vertical;
+    font-size: 1.125rem;
+    border: 1px #000 solid;
+}
+
 
 
 

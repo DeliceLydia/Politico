@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale=1.0>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Voting Page</title>
+    <title>Petition Page</title>
     <link rel="stylesheet" href="../css/css.css">
 </head>
 
@@ -35,16 +35,14 @@
                     <a href="./login.html">Log Out</a>
                 </li>
             </ul>
-
         </div>
         <div class="container">
             <div class="chunk-1">
                 <header class="head">
-                    <h1>Feel Free to Vote</h1>
-                    <p id="description">You are safe!</p>
+                    <h1>Petition</h1>
+                    <p id="description">Thanks for Choosing us!</p>
                 </header>
-
-                <form action="" id="form">
+                <form action="" id="form" class="form1">
                     <div class="form">
                         <label id="name-label" for="name">CreatedOn</label>
                         <input type="date" name="date" id="date-label" class="form-control" placeholder="Enter Id"
@@ -54,40 +52,41 @@
                         <p>CreatedBy</p>
                         <select name="role" id="dropdown" class="form2" required>
                             <option disabled selected value>Select your Id</option>
-                            <option value="student">01</option>
-                            <option value="job">02</option>
-                            <option value="learner">03</option>
-                            <option value="preferNo">04</option>
+                            <option value="user1">01</option>
+                            <option value="user2">02</option>
+                            <option value="user3">03</option>
+                            <option value="user4">04</option>
                         </select>
                     </div>
                     <div class="form">
-                        <p>Office</p>
+                        <p>Political Office</p>
                         <select name="role" id="dropdown" class="form2" required>
                             <option disabled selected value>Select Office</option>
-                            <option value="student">01</option>
-                            <option value="job">02</option>
-                            <option value="learner">03</option>
-                            <option value="preferNo">04</option>
+                            <option value="President">President</option>
+                            <option value="Prime Minister">Prime Minister</option>
+                            <option value="Senator">Senator</option>
+                            <option value="Minister">Minister</option>
                         </select>
                     </div>
                     <div class="form">
                         <p>Candidate</p>
                         <select name="role" id="dropdown" class="form2" required>
                             <option disabled selected value>Select Candidate</option>
-                            <option value="student">01</option>
-                            <option value="job">02</option>
-                            <option value="learner">03</option>
-                            <option value="preferNo">04</option>
+                            <option value="candidate">01</option>
+                            <option value="candidate">02</option>
+                            <option value="candidate">03</option>
+                            <option value="candidate">04</option>
                         </select>
                     </div>
-
                     <div class="form">
-                        <button type="submit" id="submit" class="submit-button">Create</button>
-                    </div>
+                            <p>Petition Body</p>
+                            <textarea name="comment" id="comments" class="input-textarea" placeholder="Enter your body here..."></textarea>
+                            </div>
                 </form>
-            </div>
 
+            </div>
         </div>
+
 
     </div>
 </body>

@@ -8,11 +8,12 @@
     <title>Political Office</title>
     <link rel="stylesheet" href="../css/css.css">
 </head>
+
 <body>
     <div class="content">
         <div class="navbar-side">
             <div class="navbar-side-header">
-                    <a href="index.html">Poli<span>Tico</span></a>
+                <a href="index.html">Poli<span>Tico</span></a>
             </div>
             <ul id="menu-content" class="collapse">
                 <li>
@@ -22,13 +23,10 @@
                     <a href="./office.html">Political Office</a>
                 </li>
                 <li>
-                        <a href="">Candidates</a>
-                    </li>
-                <li>
                     <a href="./vote.html">Vote</a>
                 </li>
                 <li>
-                    <a href="">Election Result</a>
+                    <a href="./result.html">Election Result</a>
                 </li>
                 <li>
                     <a href="">Create a Petition</a>
@@ -42,38 +40,34 @@
         <div class="container">
             <div class="chunk">
                 <header class="head">
-                  <h1>Political Office Information</h1>
-                  <p id="description">Thanks for Choosing us!</p>
+                    <h1>Political Office Information</h1>
+                    <p id="description">Thanks for Choosing us!</p>
                 </header>
-                
+
                 <form action="" id="form">
-                        <div class="form">
-                                <label id="name-label" for="name">Id</label>
-                    <input type="text" name="Id" id="Id-label" class="form-control" placeholder="Enter Id"
-                        required>
-                        </div>
-                        <div class="form">
-                                <p>Type</p>
-                                <select name="role" id="dropdown" class="form2" required>
-                                    <option disabled selected value>Select Type</option>
-                                    <option value="student">Federal</option>
-                                    <option value="job">Legislative</option>
-                                    <option value="learner">State</option>
-                                    <option value="preferNo">Local Government</option>
-                                </select>
-                            </div>
                     <div class="form">
-                            <label id="adress-label" for="address">Name</label>
-                <input type="text" name="address" id="address-label" class="form-control" placeholder="Enter office name"
-                    required>
+                        <label id="name-label" for="name">Id</label>
+                        <input type="text" name="Id" id="Id-label" class="form-control" placeholder="Enter Id" required>
                     </div>
-                
                     <div class="form">
-                            <button type="submit" id="submit" class="submit-button">Create</button>
-                           </div>
-                </form>
+                        <p>Type</p>
+                        <select name="role" id="dropdown" class="form2" required>
+                            <option disabled selected value>Select Type</option>
+                            <option value="student">Federal</option>
+                            <option value="job">Legislative</option>
+                            <option value="learner">State</option>
+                            <option value="preferNo">Local Government</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label id="adress-label" for="address">Name</label>
+                        <input type="text" name="address" id="address-label" class="form-control"
+                            placeholder="Enter office name" required>
+                    </div>
 
-
+                    <div class="form">
+                        <button type="submit" id="submit" class="submit-button">Create</button>
+                    </div>
                 </form>
 
             </div>

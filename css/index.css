@@ -142,13 +142,13 @@ footer ul li a{
     .navbar{
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
     }
     .logo{
         font-size: 35px;
         font-weight: 600;
         margin-top: 3.8%;
-        width: 70vw;
+        margin-left: 10%;
+        width: 90vw;
     }
     .nav ul{
         margin-top: 18%;
@@ -170,19 +170,18 @@ footer ul li a{
         font-size: 38px;
         font-weight: 700;
     }
-    section .content{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    .section{
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-around;
         align-items: center;
+        margin-bottom: 15px;
+        
     }
-    .services p{
-        max-width: 300px;
-        display: block;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+     .services p{
+        max-width: 400px;
     }
+ 
     .container .span{
         display: flex;
         flex-direction: row;
@@ -311,6 +310,7 @@ label{
         font-weight: 600;
         margin-top: 2%;
         width: 30vw;
+        margin-left: 2%;
     }
    
 }
@@ -330,7 +330,7 @@ label{
 @media(min-width: 768px){
     .logo1{
         font-size: 35px;
-        font-weight: 600;
+        font-weight: 500;
         margin-top: 2%;
         width: 30vw;
     }

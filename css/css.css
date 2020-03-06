@@ -35,6 +35,7 @@
         color: #fff;
     }
     .navbar-side a span{
+        font-size: 150%;
         color: #517d0f;
         
     }
@@ -127,14 +128,15 @@
      }
      .navbar-side-header{
         margin: 17px 0;
-        margin-left: -1px;
+        margin-left: 40px;
         font-size: 38px;
+        font-weight: 600;
          width: 50vw;
      }
      .navbar-side ul{
          display: flex;
          flex-direction: row;
-         margin-right: 40px;
+         margin-right: 90px;
         
      }
      .navbar-side ul li{
@@ -212,6 +214,8 @@ table{
         position: absolute;
         left: 0; 
         right: 0; 
+        margin-left: 15%;
+        margin-right: 15%;
        }
 }
 /* petition */
@@ -223,6 +227,18 @@ table{
     font-size: 1.125rem;
     border: 1px #000 solid;
 }
+@media(min-width: 768px){
+    .chunk-2{
+        margin-top: 1%;
+        margin-left: 25%;
+        width: 50%;
+
+    }
+    .form1{
+        margin-top: -15px;
+    }
+}
+
 
 
 

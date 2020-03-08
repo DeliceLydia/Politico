@@ -21,7 +21,7 @@ import parties from '../data/partyData';
         const{name , hqAddress, logoUrl} = req.body;
         const newParty = {partyId, name, hqAddress, logoUrl};
         parties.push(newParty);
-        return responseMessage.successUser(res, 201, 'party created successfully!', newParty);
+        return responseMessage.successUser(res, 201, 'party created successfully!', {partyId: newParty.partyId, name: newParty.name, logoUrl: newParty.logoUrl} );
      }
      static getOne(req, res){
         const admin = req.user.isAdmin;
@@ -29,7 +29,7 @@ import parties from '../data/partyData';
         
         const party = parties.find(p => p.partyId === parseInt(req.params.partyId));
         if(!party){return responseMessage.errorMessage(res, 404, 'Political party not found');}
-        else{return responseMessage.successUser(res, 200, party);}
+        else{return responseMessage.successUser(res, 200, {partyId: party.partyId, name: party.name, logoUrl: party.logoUrl});}
      }
      static getAll(req, res){
         const admin = req.user.isAdmin;

@@ -1,8 +1,11 @@
 import express from 'express';
+import politico_router from './routes/politicoRoutes';
 
 
 const app = express();
 app.use(express.json());
+
+app.use('/', politico_router);
 app.get('/', (req, res) => {
     res.send({
       status: 200,

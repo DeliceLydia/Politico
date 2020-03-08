@@ -1,6 +1,7 @@
 import express from 'express'
 import Users from '../controllers/userControllers';
-import parties from '../controllers/partyControllers';
+import Parties from '../controllers/partyControllers';
+import Offices from '../controllers/officeControllers';
 import auth from '../middleware/auth';
 
 const politico_router = express.Router();
@@ -10,10 +11,17 @@ politico_router.post('/api/v1/auth/signup', Users.signup);
 politico_router.post('/api/v1/auth/signin', Users.signin);
 
 // Party Routes //
-politico_router.post('/api/v1/parties', auth, parties.postParty);
-politico_router.get('/api/v1/parties/:partyId', auth, parties.getOne);
-politico_router.get('/api/v1/parties', auth, parties.getAll);
-politico_router.delete('/api/v1/parties/:partyId', auth, parties.DeleteOne);
+politico_router.post('/api/v1/parties', auth, Parties.postParty);
+politico_router.get('/api/v1/parties/:partyId', auth, Parties.getOne);
+politico_router.get('/api/v1/parties', auth, Parties.getAll);
+politico_router.delete('/api/v1/parties/:partyId', auth, Parties.DeleteOne);
+
+// Office Routes //
+politico_router.post('/api/v1/offices', auth, Offices.postOffice);
+politico_router.get('/api/v1/offices/:officeId', auth, Offices.getOne);
+politico_router.get('/api/v1/offices', auth, Offices.getAll);
+politico_router.delete('/api/v1/offices/:officeId', auth, Offices.deleteOne);
+
 
 
 

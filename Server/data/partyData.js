@@ -1,7 +1,7 @@
 const parties = [];
 
 const party1 = {
-  id: 1,
+  partyId: 1,
   name: 'RPF',
   hqAddress: 'Gikondo',
   logoUrl: 'URL&sxsrf=ALeKk02O-8Qx5AetDex'

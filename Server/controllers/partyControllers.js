@@ -2,7 +2,8 @@ import validateParty from '../validations/partyValidations';
 import responseMessage from '../helpers/response';
 import parties from '../data/partyData';
 
- class Parties{
+ 
+class Parties{
      static postParty(req, res){
         const { error } = validateParty.validation(req.body)
         if (error) {
@@ -21,7 +22,7 @@ import parties from '../data/partyData';
         const{name , hqAddress, logoUrl} = req.body;
         const newParty = {partyId, name, hqAddress, logoUrl};
         parties.push(newParty);
-        return responseMessage.successUser(res, 201, 'party created successfully!', {partyId: newParty.partyId, name: newParty.name, logoUrl: newParty.logoUrl} );
+        return responseMessage.successUser(res, 201, 'party created successfully!', {partyId: newParty.partyId, name: newParty.name});
      }
      static getOne(req, res){
         const admin = req.user.isAdmin;

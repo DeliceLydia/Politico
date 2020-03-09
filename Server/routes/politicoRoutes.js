@@ -18,6 +18,7 @@ politico_router.delete('/api/v1/parties/:partyId', auth, Parties.DeleteOne);
 
 // Office Routes //
 politico_router.post('/api/v1/offices', auth, Offices.postOffice);
+politico_router.post('/api/v1/offices/:officeId/register', auth, Offices.CandidateRegister);
 politico_router.get('/api/v1/offices/:officeId', auth, Offices.getOne);
 politico_router.get('/api/v1/offices', auth, Offices.getAll);
 politico_router.delete('/api/v1/offices/:officeId', auth, Offices.deleteOne);

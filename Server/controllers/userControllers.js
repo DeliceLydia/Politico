@@ -17,9 +17,9 @@ class Users {
         const user = users.find(u => u.email === req.body.email);
         if (user) { return responseMessage.errorMessage(res, 400, 'Email already exist'); }
         const hash = bcrypt.hashSync(req.body.password.trim(),10);
-        const id = parseInt(users.length + 1);
+        const userId = parseInt(users.length + 1);
         const{firstname, lastname, othername, phoneNumber, email, passportUrl, isAdmin} = req.body;
-        const newUser = {id, firstname, lastname, othername, phoneNumber, email, password: hash, passportUrl, isAdmin};
+        const newUser = {userId, firstname, lastname, othername, phoneNumber, email, password: hash, passportUrl, isAdmin};
         const payload = {email: newUser.email, isAdmin: newUser.isAdmin};
         const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '24hrs' });
         users.push(newUser);

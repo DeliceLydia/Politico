@@ -1,7 +1,7 @@
 const users = [];
 
 const user1 = {
-    id: 1,
+    userId: 1,
     firstname: 'Ingabire',
     lastname: 'Lydia',
     othername: 'Delice',
@@ -12,7 +12,7 @@ const user1 = {
     is_admin: 'true',
 };
 const user2 = {
-    id: 2,
+    userId: 2,
     firstname: 'Mugwaneza',
     lastname: 'Ephrem',
     othername: 'Em',
@@ -23,7 +23,7 @@ const user2 = {
     is_admin: 'false',
 };
 const user3 = {
-    id: 3,
+    userId: 3,
     firstname: 'Nishimwe',
     lastname: 'Evodie',
     othername: 'Paradis',

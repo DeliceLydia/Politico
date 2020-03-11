@@ -6,11 +6,11 @@ const validateSignup = {
             firstname: joi.string().min(4).max(6).trim().required(),
             lastname: joi.string().min(4).max(6).trim().required(),
             othername: joi.string().min(4).max(6).trim().required(),
-            phoneNumber: joi.string().min(8).max(10).trim().required(),
+            phonenumber: joi.string().min(8).max(10).trim().required(),
             email: joi.string().email({ minDomainAtoms: 2 }).trim().required(),
             password:  joi.string().regex(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/).trim().required(),
-            passportUrl: joi.string().trim().required(),
-            isAdmin: joi.boolean().optional()
+            passporturl: joi.string().trim().required(),
+            isadmin: joi.boolean().optional()
         }; 
         return joi.validate(signup, schema);
     }

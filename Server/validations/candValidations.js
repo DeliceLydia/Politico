@@ -3,8 +3,9 @@ import joi from 'joi';
 const validateCandidate = {
     validation(candidate) { 
         const schema = {
-          partyId: joi.number().required(),
-          candidateId: joi.number().required()
+          officeid: joi.number().required(),
+          partyid: joi.number().required(),
+          candidate: joi.number().required()
         };
         return joi.validate(candidate, schema);
       }

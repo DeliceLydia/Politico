@@ -1,29 +1,27 @@
-import express from 'express'
-import Users from '../controllers/userControllers';
-import Parties from '../controllers/partyControllers';
-import Offices from '../controllers/officeControllers';
+import express from 'express';
+import UsersControllers from '../controllers/usersControllers';
+import PartyControllers from '../controllers/partyControllers';
+import OfficeControllers from '../controllers/officesControllers';
 import auth from '../middleware/auth';
 
-const politico_router = express.Router();
+const router = express.Router();
 
 // user Routes //
-politico_router.post('/api/v1/auth/signup', Users.signup);
-politico_router.post('/api/v1/auth/signin', Users.signin);
+router.post('/api/v1/auth/signup', UsersControllers.signup);
+router.post('/api/v1/auth/signin', UsersControllers.signin);
 
 // Party Routes //
-politico_router.post('/api/v1/parties', auth, Parties.postParty);
-politico_router.get('/api/v1/parties/:partyId', auth, Parties.getOne);
-politico_router.get('/api/v1/parties', auth, Parties.getAll);
-politico_router.delete('/api/v1/parties/:partyId', auth, Parties.DeleteOne);
+router.post('/api/v1/parties', auth, PartyControllers.postParty);
+router.get('/api/v1/parties/:partyid', auth, PartyControllers.getOne);
+router.get('/api/v1/parties', auth, PartyControllers.getAll);
+router.delete('/api/v1/parties/:partyid', auth, PartyControllers.DeleteOne);
 
 // Office Routes //
-politico_router.post('/api/v1/offices', auth, Offices.postOffice);
-politico_router.post('/api/v1/offices/:officeId/register', auth, Offices.CandidateRegister);
-politico_router.get('/api/v1/offices/:officeId', auth, Offices.getOne);
-politico_router.get('/api/v1/offices', auth, Offices.getAll);
-politico_router.delete('/api/v1/offices/:officeId', auth, Offices.deleteOne);
+router.post('/api/v1/offices', auth, OfficeControllers.postOffice);
+router.post('/api/v1/offices/:officeid/register', auth, OfficeControllers.CandidateRegister);
+router.get('/api/v1/offices/:officeid', auth, OfficeControllers.getOne);
+router.get('/api/v1/offices', auth, OfficeControllers.getAll);
+router.delete('/api/v1/offices/:officeid', auth, OfficeControllers.deleteOne);
 
 
-
-
-export default politico_router;
+export default router;

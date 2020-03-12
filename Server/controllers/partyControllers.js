@@ -16,11 +16,11 @@ class PartyControllers {
 
     const nameValue = req.body.name;
     const partyName = await pool.query(sql.findPartyName, [nameValue]);
-    if (partyName.rows[0]) { return responseMessage.errorMessage(res, 400, 'Name already exist'); }
+    if (partyName.rows[0]) { return responseMessage.errorMessage(res, 406, 'Name already exist'); }
 
     const logoValue = req.body.logourl;
     const partyLogo = await pool.query(sql.findLogo, [logoValue]);
-    if (partyLogo.rows[0]) { return responseMessage.errorMessage(res, 400, 'LogoUrl already exist'); }
+    if (partyLogo.rows[0]) { return responseMessage.errorMessage(res, 406, 'LogoUrl already exist'); }
 
     const { name, hqaddress, logourl } = req.body;
     const newParty = { name, hqaddress, logourl };

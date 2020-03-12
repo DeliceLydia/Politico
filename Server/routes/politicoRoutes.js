@@ -2,6 +2,7 @@ import express from 'express';
 import UsersControllers from '../controllers/usersControllers';
 import PartyControllers from '../controllers/partyControllers';
 import OfficeControllers from '../controllers/officesControllers';
+import VotesControllers from '../controllers/votesControllers';
 import auth from '../middleware/auth';
 
 const router = express.Router();
@@ -22,6 +23,9 @@ router.post('/api/v1/offices/:officeid/register', auth, OfficeControllers.Candid
 router.get('/api/v1/offices/:officeid', auth, OfficeControllers.getOne);
 router.get('/api/v1/offices', auth, OfficeControllers.getAll);
 router.delete('/api/v1/offices/:officeid', auth, OfficeControllers.deleteOne);
+
+// votes Routes //
+router.post('/api/v1/votes', auth, VotesControllers.vote);
 
 
 export default router;

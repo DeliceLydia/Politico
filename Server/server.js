@@ -1,4 +1,5 @@
-import express from './node_modules/express';
+import '@babel/polyfill';
+import express from 'express';
 import router from './routes/politicoRoutes';
 
 

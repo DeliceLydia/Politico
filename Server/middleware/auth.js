@@ -1,5 +1,5 @@
-import jwt from './node_modules/jsonwebtoken';
-import dotenv from './node_modules/dotenv';
+import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
 
 dotenv.config();
 

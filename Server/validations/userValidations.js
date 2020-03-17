@@ -1,4 +1,4 @@
-import joi from './node_modules/joi';
+import joi from 'joi';
 
 const validateSignup = {
   validation(signup) {

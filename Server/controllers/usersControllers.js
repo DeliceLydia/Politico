@@ -1,6 +1,6 @@
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
-import dotenv from 'dotenv';
+import jwt from './node_modules/jsonwebtoken';
+import bcrypt from './node_modules/bcrypt';
+import dotenv from './node_modules/dotenv';
 import { validateSignup, validateSignin } from '../validations/userValidations';
 import responseMessage from '../helpers/response';
 import sql from '../helpers/queries';

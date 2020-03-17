@@ -1,6 +1,6 @@
 import chai from 'chai';
-import chaiHttp from 'chai-http';
-import dotenv from 'dotenv';
+import chaiHttp from './node_modules/chai-http';
+import dotenv from './node_modules/dotenv';
 import app from '../server';
 
 dotenv.config();

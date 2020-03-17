@@ -1,4 +1,4 @@
-import express from 'express';
+import express from './node_modules/express';
 import UsersControllers from '../controllers/usersControllers';
 import PartyControllers from '../controllers/partyControllers';
 import OfficeControllers from '../controllers/officesControllers';

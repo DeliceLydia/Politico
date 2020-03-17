@@ -1,4 +1,4 @@
-import express from 'express';
+import express from './node_modules/express';
 import router from './routes/politicoRoutes';
 
 

@@ -1,4 +1,4 @@
-import joi from 'joi';
+import joi from './node_modules/joi';
 
 const validateParty = {
   validation(party) {

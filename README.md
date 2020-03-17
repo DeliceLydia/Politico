@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/DeliceLydia/Politico.svg?branch=develop)](https://travis-ci.org/DeliceLydia/Politico)
 
-[![Coverage Status](https://coveralls.io/repos/github/DeliceLydia/Politico/badge.svg)](https://coveralls.io/github/DeliceLydia/Politico)
+[![Coverage Status](https://coveralls.io/repos/github/DeliceLydia/Politico/badge.svg?branch=develop)](https://coveralls.io/github/DeliceLydia/Politico?branch=develop)
 
 
 # Politico

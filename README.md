@@ -33,11 +33,35 @@ POLITICO is a fullstack Javascript application that enables citizens to give the
 | /api/v1/offices/:officeId| GET | Get the admin to get a specific political office by Id|
 | /api/v1/offices/:officeId | DELETE| Get the admin to DELETE a specific political  by Id |
 
+
+## SERVER ENVIRONMENT
+ *NODEJS (runtime environment for running JS codes)
+
+## FRAMEWORKS
+*Express (used for building fast APIs )
+
 ## BUILT WITH
 
  * Javascript
  * NodeJs
  * ExpressJs
+
+## DATABASE
+ * Postgresql
+
+## TESTING FRAMEWORK AND ASSERTION LIBRARY
+ *Mocha
+ *Chai
+
+## CONTINUOUS INTEGRATION
+Travis CI
+
+## TEST COVERAGE
+nyc
+
+## DEPLOYMENT
+heroku
+
 
 ## HOW TO RUN THE APPLICATION
 
@@ -60,5 +84,23 @@ It will install the node_modules which will help you run the project on your loc
 ```
 > npm start
 ```
+
+## Create table in the database
+```
+ >npm run tables
+```
+
+## Delete table in the database
+```
+>npm run drop
+```
+## Run test
+```
+>npm test
+```
+
 ## Author
-- Delice Lydia <Delydia84@gmail.com>
+. Delice Lydia <Delydia84@gmail.com>
+
+## Licence & copyright
+Copyright (c) Delice Lydia Ingabire, Software Developer

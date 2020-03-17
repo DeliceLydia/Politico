@@ -151,11 +151,12 @@ footer ul li a{
         width: 90vw;
     }
     .nav ul{
+        margin-right: 120px; 
         margin-top: 18%;
         width: 20vw;
         display: flex;  
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         font-size: 20px;
       }
       .header{
@@ -173,7 +174,7 @@ footer ul li a{
     .section{
         display: flex; 
         flex-direction: row; 
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         margin-bottom: 15px;
         
@@ -311,6 +312,9 @@ label{
         margin-top: 2%;
         width: 30vw;
         margin-left: 2%;
+    }
+    #container{
+        margin-top: -5%;
     }
    
 }

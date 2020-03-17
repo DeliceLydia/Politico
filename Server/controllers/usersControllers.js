@@ -17,11 +17,11 @@ class UsersControllers {
     }
     const emailValue = req.body.email;
     const userEmail = await pool.query(sql.findUser, [emailValue]);
-    if (userEmail.rows[0]) { return responseMessage.errorMessage(res, 406, 'Email already exist'); }
+    if (userEmail.rows[0]) { return responseMessage.errorMessage(res, 400, 'Email already exist'); }
 
     const numberValue = req.body.phonenumber;
     const checkNumber = await pool.query(sql.findNumber, [numberValue]);
-    if (checkNumber.rows[0]) { return responseMessage.errorMessage(res, 406, 'phoneNumber already exist'); }
+    if (checkNumber.rows[0]) { return responseMessage.errorMessage(res, 400, 'phoneNumber already exist'); }
 
     const hash = bcrypt.hashSync(req.body.password.trim(), 10);
     const {

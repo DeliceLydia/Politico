@@ -46,10 +46,10 @@ class UsersControllers {
 
     const userEmail = req.body.email;
     const { rows } = await pool.query(sql.findUser, [userEmail]);
-    if (!rows[0]) { return responseMessage.errorMessage(res, 406, 'you provided wrong credentials!'); }
+    if (!rows[0]) { return responseMessage.errorMessage(res, 400, 'you provided wrong credentials!'); }
 
     const password = bcrypt.compareSync(req.body.password.trim(), rows[0].password);
-    if (!password) { return responseMessage.errorMessage(res, 406, 'you provided wrong credentials!'); }
+    if (!password) { return responseMessage.errorMessage(res, 400, 'you provided wrong credentials!'); }
     const { email } = rows[0];
     const payload = { userid: rows[0].userid, email: rows[0].email, isadmin: rows[0].isadmin };
     const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '24hrs' });

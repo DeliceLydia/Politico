@@ -149,7 +149,7 @@ describe('signin', ()=>{
      .post('/api/v1/auth/signin')
      .send(returningUser)
      .end((err, res)=>{
-        expect(res.status).to.be.eql(406);
+        expect(res.status).to.be.eql(400);
         expect(res.body).to.be.an('Object');
         done();
     })
@@ -163,7 +163,7 @@ it('user should not be able to signin when provided wrong password',(done)=>{
  .post('/api/v1/auth/signin')
  .send(returningUser)
  .end((err, res)=>{
-    expect(res.status).to.be.eql(406);
+    expect(res.status).to.be.eql(400);
     expect(res.body).to.be.an('Object');
     done();
        })

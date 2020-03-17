@@ -35,10 +35,10 @@ POLITICO is a fullstack Javascript application that enables citizens to give the
 
 
 ## SERVER ENVIRONMENT
- *NODEJS (runtime environment for running JS codes)
+ * NODEJS (runtime environment for running JS codes)
 
 ## FRAMEWORKS
-*Express (used for building fast APIs )
+* Express (used for building fast APIs )
 
 ## BUILT WITH
 
@@ -50,17 +50,17 @@ POLITICO is a fullstack Javascript application that enables citizens to give the
  * Postgresql
 
 ## TESTING FRAMEWORK AND ASSERTION LIBRARY
- *Mocha
- *Chai
+ * Mocha
+ * Chai
 
 ## CONTINUOUS INTEGRATION
-Travis CI
+ * Travis CI
 
 ## TEST COVERAGE
-nyc
+ * nyc
 
 ## DEPLOYMENT
-heroku
+* heroku
 
 
 ## HOW TO RUN THE APPLICATION
@@ -100,7 +100,7 @@ It will install the node_modules which will help you run the project on your loc
 ```
 
 ## Author
-. Delice Lydia <Delydia84@gmail.com>
+  Delice Lydia <Delydia84@gmail.com>
 
 ## Licence & copyright
 Copyright (c) Delice Lydia Ingabire, Software Developer

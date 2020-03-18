@@ -38,7 +38,7 @@ POLITICO is a fullstack Javascript application that enables citizens to give the
  * NODEJS (runtime environment for running JS codes)
 
 ## FRAMEWORKS
-* Express (used for building fast APIs )
+ * Express (used for building fast APIs )
 
 ## BUILT WITH
 
@@ -47,20 +47,25 @@ POLITICO is a fullstack Javascript application that enables citizens to give the
  * ExpressJs
 
 ## DATABASE
+ 
  * Postgresql
 
 ## TESTING FRAMEWORK AND ASSERTION LIBRARY
+ 
  * Mocha
  * Chai
 
 ## CONTINUOUS INTEGRATION
+ 
  * Travis CI
 
 ## TEST COVERAGE
+ 
  * nyc
 
 ## DEPLOYMENT
-* heroku
+ 
+ * heroku
 
 
 ## HOW TO RUN THE APPLICATION
@@ -75,28 +80,28 @@ POLITICO is a fullstack Javascript application that enables citizens to give the
 The installation of this application is fairly straightforward, After cloning this repository to your local machine,CD into the package folder using your terminal and run the following
 
 ```
-> npm install
+  npm install
 ```
 
 It will install the node_modules which will help you run the project on your local machine.
 
 ## Run the server
 ```
-> npm start
+  npm start
 ```
 
 ## Create table in the database
 ```
- >npm run tables
+  npm run tables
 ```
 
 ## Delete table in the database
 ```
->npm run drop
+ npm run drop
 ```
 ## Run test
 ```
->npm test
+ npm test
 ```
 
 ## Author

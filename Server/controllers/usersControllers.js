@@ -1,12 +1,11 @@
-import jwt from 'jsonwebtoken';
+import createToken from '../helpers/token';
+import payLoad from '../helpers/payLoad';
 import bcrypt from 'bcrypt';
-import dotenv from 'dotenv';
 import { validateSignup, validateSignin } from '../validations/userValidations';
 import responseMessage from '../helpers/response';
 import sql from '../helpers/queries';
 import pool from '../config/connect';
 
-dotenv.config();
 
 class UsersControllers {
   static async signup(req, res) {
@@ -32,9 +31,10 @@ class UsersControllers {
     };
     const result = await pool.query(sql.addUser,
       [newUser.firstname, newUser.lastname, newUser.othername, newUser.phonenumber, newUser.email, newUser.password, newUser.passporturl, newUser.isadmin]);
-    const payload = { userid: result.rows[0].userid, email: result.rows[0].email, isadmin: result.rows[0].isadmin };
-    const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '24hrs' });
-    return responseMessage.successWithData(res, 201, 'user created successfully!', token, newUser);
+    const userData = result.rows[0];
+    const payload = payLoad(userData.userid, userData.email, userData.isadmin);
+    res.header('Authorization', createToken(payload));
+    return responseMessage.successWithData(res, 201, 'user created successfully!', createToken(payload), newUser);
   }
 
   static async signin(req, res) {
@@ -51,9 +51,9 @@ class UsersControllers {
     const password = bcrypt.compareSync(req.body.password.trim(), rows[0].password);
     if (!password) { return responseMessage.errorMessage(res, 400, 'you provided wrong credentials!'); }
     const { email } = rows[0];
-    const payload = { userid: rows[0].userid, email: rows[0].email, isadmin: rows[0].isadmin };
-    const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '24hrs' });
-    return responseMessage.successWithData(res, 200, 'signed in successfully!', token, { email });
+    const payload = payLoad(rows[0].userid, rows[0].email, rows[0].isadmin);
+    res.header('Authorization', createToken(payload));
+    return responseMessage.successWithData(res, 200, 'signed in successfully!', createToken(payload), { email });
   }
 }
 export default UsersControllers;

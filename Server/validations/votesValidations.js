@@ -3,7 +3,6 @@ import joi from 'joi';
 const validateVotes = {
   validation(voter) {
     const schema = {
-      createdon: joi.string().required(),
       voterid: joi.number().required(),
       officeid: joi.number().required(),
       candidate: joi.number().required(),

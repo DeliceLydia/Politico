@@ -15,7 +15,7 @@ const user= {
     email : "lydia@gmail.com",
     password: "Lydie1@",
     passporturl: "LP452354",
-    isadmin : "true"
+    isadmin : true
  }
 
 //  signup //

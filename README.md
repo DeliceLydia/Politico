@@ -38,6 +38,7 @@ POLITICO is a fullstack Javascript application that enables citizens to give the
 | /api/v1/offices/:officeId| GET | Get the admin to get a specific political office by Id|
 | /api/v1/offices/:officeId | DELETE| Get the admin to DELETE a specific political  by Id |
 
+For more details about endpoints [check the documentation here](https://documenter.getpostman.com/view/6368898/SzS7Nk1X)
 
 ## SERVER ENVIRONMENT
  * NODEJS (runtime environment for running JS codes)

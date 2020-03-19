@@ -15,8 +15,9 @@ class OfficesControllers {
     const admin = req.user.isadmin;
     if (admin !== true) { return responseMessage.errorMessage(res, 403, 'Strictly for the admin'); }
     const nameValue = req.body.name;
-    const partyName = await pool.query(sql.findPartyName, [nameValue]);
-    if (partyName.rows[0]) { return responseMessage.errorMessage(res, 406, 'Name already exist'); }
+   
+    const OfficeName = await pool.query(sql.findOfficeName, [nameValue]);
+    if (OfficeName.rows[0]) { return responseMessage.errorMessage(res, 400, 'Name already exist'); }
 
     const { type, name } = req.body;
     const newOffice = { type, name };
@@ -34,7 +35,7 @@ class OfficesControllers {
     if (admin !== true) { return responseMessage.errorMessage(res, 403, 'Strictly for the admin'); }
     const idValue = req.body.id;
     const candidateId = await pool.query(sql.findCandidate, [idValue]);
-    if (candidateId.rows[0]) { return responseMessage.errorMessage(res, 406, 'id already exist'); }
+    if (candidateId.rows[0]) { return responseMessage.errorMessage(res, 400, 'id already exist'); }
 
     const partyValue = req.body.partyid;
     const { rows } = await pool.query(sql.getOne, [partyValue]);
@@ -45,7 +46,7 @@ class OfficesControllers {
 
     const candidateValue = req.body.candidate;
     const valueCand = await pool.query(sql.findCandidate, [candidateValue]);
-    if (valueCand.rows[0]) { return responseMessage.errorMessage(res, 406, 'Candidate already exist!'); }
+    if (valueCand.rows[0]) { return responseMessage.errorMessage(res, 400, 'Candidate already exist!'); }
     const { officeid, partyid, candidate } = req.body;
     const newCandidate = { officeid, partyid, candidate };
     await pool.query(sql.registerCand, [newCandidate.officeid, newCandidate.partyid, newCandidate.candidate]); return responseMessage.successUser(res, 201, 'candidate registered successfully!', { officeid, candidate });

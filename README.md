@@ -13,7 +13,7 @@ POLITICO is a fullstack Javascript application that enables citizens to give the
 * CSS
 
 ### GitHub Pages link for UI
-[Politico/UI link](https://delicelydia.github.io/Politico/html/index.html)
+[Politico/UI link](https://delicelydia.github.io/Politico/UI/html/index.html)
 
 ### Link to Politico on Heroku
 [Politico/Heroku link](https://politico1.herokuapp.com/)

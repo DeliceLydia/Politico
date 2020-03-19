@@ -159,6 +159,10 @@ footer ul li a{
         justify-content: space-evenly;
         font-size: 20px;
       }
+    .nav ul li a:hover{
+        color: #517d0f;
+        font-size: 22px;
+    }
       .header{
           margin-top: 1%;
       }

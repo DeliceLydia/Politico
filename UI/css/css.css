@@ -136,13 +136,10 @@
      .navbar-side ul{
          display: flex;
          flex-direction: row;
-         margin-right: 90px;
+         margin-right: 120px;
         
      }
-     .navbar-side ul li{
-        padding: 0 20px;
-     }
-     .chunk{
+     .chunk-party{
          margin-top: 6%;
          margin-left: 25%;
          width: 50%;
@@ -173,17 +170,25 @@
         .form2{
             width: 93%;
         }
+        .chunk-office{
+            margin-top: 6%;
+            margin-left: 25%;
+            width: 50%;
+        }
     }
     /* vote */
     @media(min-width: 768px){
     .chunk-1{
-        margin-top: 3%;
+        margin-top: -2%;
         margin-left: 25%;
         width: 50%;
     }
     .navbar-side ul li{
         padding: 0 20px;
      }
+    #form{
+        margin-top: -35px;
+    }
 }
 /* result */
 thead{
@@ -217,6 +222,9 @@ table{
         margin-left: 15%;
         margin-right: 15%;
        }
+   .chunk{
+       margin-top: 140px;
+   }
 }
 /* petition */
 .input-textarea{

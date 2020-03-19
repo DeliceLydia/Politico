@@ -2,6 +2,10 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/DeliceLydia/Politico/badge.svg?branch=develop)](https://coveralls.io/github/DeliceLydia/Politico?branch=develop)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/b6c6066e3ce6efed0b95/maintainability)](https://codeclimate.com/github/DeliceLydia/Politico/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b6c6066e3ce6efed0b95/test_coverage)](https://codeclimate.com/github/DeliceLydia/Politico/test_coverage)
+
 
 # Politico
 POLITICO is a fullstack Javascript application that enables citizens to give their mandate to politicians running for different government offices while building trust in the process through transparency.

@@ -45,12 +45,10 @@ const createTables = () => {
  );`;
   const queries = `${users};${parties};${offices};${candidates};${votes};`;
   pool.query(queries).then((res) => {
-    console.log(res);
     pool.end();
     return res;
   })
     .catch((err) => {
-      console.log(err);
       pool.end();
     });
 };

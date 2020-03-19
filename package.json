@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./Server/server.js",
-    "start": "NODE_ENV=development node --require @babel/register ./Server/server.js",
+    "start": "NODE_ENV=development npm run tables && node --require @babel/register ./Server/server.js",
     "tables": "NODE_ENV=development node --require @babel/register ./Server/database/db  createTables",
-    "drop": "NODE_ENV=development node --require @babel/register ./Server/database/db dropTables",
+    "drop": "node --require @babel/register ./Server/database/db dropTables",
     "test": "NODE_ENV=testing npm run drop && npm run tables && nyc --reporter=html --reporter=text mocha --timeout 5000 --require @babel/register Server/tests/* --exit",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },

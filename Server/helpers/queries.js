@@ -18,6 +18,7 @@ const deleteOne = 'DELETE FROM parties WHERE partyid = $1';
 // office //
 const postOffice = 'INSERT INTO offices(type, name) VALUES ($1, $2)Returning*';
 const findOffice = 'SELECT * FROM offices WHERE officeid = $1';
+const findOfficeName = 'SELECT * FROM offices WHERE name = $1'
 const allOffices = 'SELECT * FROM offices';
 const deleteOffice = 'DELETE FROM offices WHERE officeid = $1';
 
@@ -44,6 +45,7 @@ sql.getOne = getOne;
 sql.deleteOne = deleteOne;
 sql.postOffice = postOffice;
 sql.findOffice = findOffice;
+sql.findOfficeName = findOfficeName;
 sql.allOffices = allOffices;
 sql.deleteOffice = deleteOffice;
 sql.registerCand = registerCand;

@@ -57,7 +57,7 @@ class OfficesControllers {
     if (admin !== true) { return responseMessage.errorMessage(res, 403, 'Strictly for the admin'); }
     const officeId = req.params.officeid;
     const { rows } = await pool.query(sql.findOffice, [officeId]);
-    if (!rows.length > 0) { return responseMessage.errorMessage(res, 404, 'office not found'); } return responseMessage.successUser(res, 200, rows[0]);
+    if (!rows.length > 0) { return responseMessage.errorMessage(res, 404, 'office not found'); } return responseMessage.successUser(res, 200, 'political office was found successfully!', rows[0]);
   }
 
   static async getAll(req, res) {
@@ -65,7 +65,7 @@ class OfficesControllers {
     if (admin !== true) { return responseMessage.errorMessage(res, 403, 'Strictly for the admin'); }
     const offices = await pool.query(sql.allOffices);
     if (!offices.rows[0]) { return responseMessage.errorMessage(res, 404, 'no Political office found'); }
-    return responseMessage.successUser(res, 200, offices.rows);
+    return responseMessage.successUser(res, 200, 'political offices was found successfully!', offices.rows);
   }
 
   static async deleteOne(req, res) {

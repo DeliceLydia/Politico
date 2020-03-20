@@ -34,7 +34,7 @@ class PartyControllers {
     const partyValue = req.params.partyid;
     const { rows } = await pool.query(sql.getOne, [partyValue]);
     if (!rows.length > 0) { return responseMessage.errorMessage(res, 404, 'Political party not found'); }
-    return responseMessage.successUser(res, 200, { partyid: rows[0].partyid, name: rows[0].name, logourl: rows[0].logoUrl });
+    return responseMessage.successUser(res, 200, 'political party was found successfully!', { partyid: rows[0].partyid, name: rows[0].name, logourl: rows[0].logoUrl });
   }
 
   static async getAll(req, res) {
@@ -42,7 +42,7 @@ class PartyControllers {
     if (admin !== true) { return responseMessage.errorMessage(res, 403, 'Strictly for the admin'); }
     const parties = await pool.query(sql.getAll);
     if (!parties.rows[0]) { return responseMessage.errorMessage(res, 404, 'no Political party found'); }
-    return responseMessage.successUser(res, 200, parties.rows);
+    return responseMessage.successUser(res, 200,'political party was found successfully!', parties.rows);
   }
 
   static async DeleteOne(req, res) {

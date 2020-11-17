@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Petition Page</title>
+    <link rel="stylesheet" href="../css/css.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="navbar-side">
+            <div class="navbar-side-header">
+                <a href="index.html">Poli<span>Tico</span></a>
+            </div>
+            <ul id="menu-content" class="collapse">
+                <li>
+                    <a href="./party.html">Party</a>
+                </li>
+                <li>
+                    <a href="./office.html">Office</a>
+                </li>
+                <li>
+                    <a href="./vote.html">Vote</a>
+                </li>
+                <li>
+                    <a href="./result.html">Result</a>
+                </li>
+                <li>
+                    <a href="./petition.html">Petition</a>
+                </li>
+                <li>
+                    <a href="./login.html">Log Out</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="chunk-2">
+                <header class="head">
+                    <h1>Petition</h1>
+                    <p id="description">Thanks for Choosing us!</p>
+                </header>
+                <form action="./index.html" id="form" class="form1">
+                    <div class="form">
+                        <label id="name-label" for="name">CreatedOn</label>
+                        <input type="date" name="date" id="date-label" class="form-control" placeholder="Enter Id"
+                            required>
+                    </div>
+                    <div class="form">
+                        <p>CreatedBy</p>
+                        <select name="role" id="dropdown" class="form2" required>
+                            <option disabled selected value>Select your Id</option>
+                            <option value="user1">01</option>
+                            <option value="user2">02</option>
+                            <option value="user3">03</option>
+                            <option value="user4">04</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <p>Political Office</p>
+                        <select name="role" id="dropdown" class="form2" required>
+                            <option disabled selected value>Select Office</option>
+                            <option value="President">President</option>
+                            <option value="Prime Minister">Prime Minister</option>
+                            <option value="Senator">Senator</option>
+                            <option value="Minister">Minister</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <p>Candidate</p>
+                        <select name="role" id="dropdown" class="form2" required>
+                            <option disabled selected value>Select Candidate</option>
+                            <option value="candidate">01</option>
+                            <option value="candidate">02</option>
+                            <option value="candidate">03</option>
+                            <option value="candidate">04</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                            <p>Petition Body</p>
+                            <textarea name="comment" id="comments" class="input-textarea" placeholder="Enter your body here..."></textarea>
+                            </div>
+                            <div class="form">
+                                <button type="submit" id="submit" class="submit-button">Submit</button>
+                               </div>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Voting Page</title>
+    <link rel="stylesheet" href="../css/css.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="navbar-side">
+            <div class="navbar-side-header">
+                <a href="index.html">Poli<span>Tico</span></a>
+            </div>
+            <ul id="menu-content" class="collapse">
+                <li>
+                    <a href="./party.html">Party</a>
+                </li>
+                <li>
+                    <a href="./office.html">Office</a>
+                </li>
+                <li>
+                    <a href="./vote.html">Vote</a>
+                </li>
+                <li>
+                    <a href="./result.html">Result</a>
+                </li>
+                <li>
+                    <a href="./petition.html">Petition</a>
+                </li>
+                <li>
+                    <a href="./login.html">Log Out</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="container">
+            <div class="chunk-1">
+                <header class="head">
+                    <h1>Feel Free to Vote</h1>
+                    <p id="description">You are safe!</p>
+                </header>
+
+                <form action="./index.html" id="form">
+                    <div class="form">
+                        <label id="name-label" for="name">CreatedOn</label>
+                        <input type="date" name="date" id="date-label" class="form-control" placeholder="Enter Id"
+                            required>
+                    </div>
+                    <div class="form">
+                        <p>Voter</p>
+                        <select name="role" id="dropdown" class="form2" required>
+                            <option disabled selected value>Select your Id</option>
+                            <option value="student">01</option>
+                            <option value="job">02</option>
+                            <option value="learner">03</option>
+                            <option value="preferNo">04</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <p>Office</p>
+                        <select name="role" id="dropdown" class="form2" required>
+                            <option disabled selected value>Select Office</option>
+                            <option value="student">01</option>
+                            <option value="job">02</option>
+                            <option value="learner">03</option>
+                            <option value="preferNo">04</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <p>Candidate</p>
+                        <select name="role" id="dropdown" class="form2" required>
+                            <option disabled selected value>Select Candidate</option>
+                            <option value="student">01</option>
+                            <option value="job">02</option>
+                            <option value="learner">03</option>
+                            <option value="preferNo">04</option>
+                        </select>
+                    </div>
+
+                    <div class="form">
+                        <button type="submit" id="submit" class="submit-button">Create</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
